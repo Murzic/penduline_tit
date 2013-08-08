@@ -7,6 +7,6 @@ FactoryGirl.define do
     password 'changeme'
     password_confirmation 'changeme'
     # required if the Devise Confirmable module is used
-    # confirmed_at Time.now
+    # confirmes
   end
 end
