@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   rolify
+  has_many :time_entries
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
