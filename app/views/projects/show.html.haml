@@ -4,7 +4,8 @@
   %th Date
   %th Hours
   - @users.each do |user|
-    %tr
-      %td= user.name
-      %td= user.time_entries.first.date
-      %td= user.time_entries.first.hours
+    - if user.time_entries.exists?
+      %tr
+        %td= user.name
+        %td= user.time_entries.first.date
+        %td= user.time_entries.first.hours
