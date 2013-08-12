@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20130807140109) do
   add_index "roles", ["name"], name: "index_roles_on_name"
 
   create_table "time_entries", force: true do |t|
-    t.time     "date"
+    t.date     "date"
     t.float    "hours"
     t.integer  "project_id"
     t.integer  "user_id"

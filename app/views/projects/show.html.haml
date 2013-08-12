@@ -5,6 +5,6 @@
   - @users.each do |user|
     - if user.time_entries.where(project: @project).any?
       %tr
-        %td= link_to user.name, user
+        %td= link_to user.name, project_time_entries_path(@project, user_id: user)
         %td= user.time_entries.where(project: @project).sum(:hours)
 = link_to "Back", root_path

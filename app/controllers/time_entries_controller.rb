@@ -2,6 +2,10 @@ class TimeEntriesController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     @time_entry = @project.time_entries.new
+    if current_user.has_role? :admin
+      @user = User.find(params[:user_id])
+    end
+
   end
 
   def create
