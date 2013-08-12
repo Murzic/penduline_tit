@@ -1,11 +1,10 @@
 %h2= @project.name
 %table
   %th Developer name
-  %th Date
-  %th Hours
+  %th Hours worked on the project
   - @users.each do |user|
-    - if user.time_entries.exists?
+    - if user.time_entries.where(project: @project).any?
       %tr
-        %td= user.name
-        %td= user.time_entries.first.date
-        %td= user.time_entries.first.hours
+        %td= link_to user.name, user
+        %td= user.time_entries
+= link_to "Back", root_path
