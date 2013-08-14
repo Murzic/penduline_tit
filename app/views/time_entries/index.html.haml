@@ -9,19 +9,19 @@
           %td= time_entry.date
           %td= time_entry.hours
   - else
-    - current_user.time_entries.each do |time_entry|
+    = form_for @time_entry, url: project_time_entries_path(@project)  do |f|
+      %tr
+        %td= f.date_field(:date)
+        %td= f.text_field(:hours)
+        %td= f.submit
+
+    - current_user.time_entries.reverse_each do |time_entry|
       - if time_entry.project == @project
         %tr
           %td= time_entry.date
           %td= time_entry.hours
-    = form_for @time_entry, url: project_time_entries_path(@project)  do |f|
-      %tr
-        %td= f.date_field(:date)
-        %td= f.number_field(:hours)
-        %td= f.submit
 
 - if current_user.has_role? :admin
   = link_to "Back", project_path(@project)
 - else
   = link_to "Back", root_path
-end
