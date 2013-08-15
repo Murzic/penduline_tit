@@ -1,0 +1,26 @@
+%form
+  %fieldset
+    %legend Sign in
+    = form_for(resource, as: resource_name, url:session_path(resource_name)) do |f|
+      %div.row
+        %div.large-4.large-centered.columns
+          = f.label :email
+          = f.email_field :email, :autofocus => true
+      %div.row
+        %div.large-4.large-centered.columns
+          = f.label :password
+          = f.password_field :password
+      - if devise_mapping.rememberable?
+        %div.row
+          %div.large-centered.large-4.columns
+            %div.row
+              %div.large-1.columns
+                = f.check_box :remember_me
+              %div.large-11.columns
+                = f.label :remember_me
+      %div.row
+        %div.large-4.large-centered.columns
+          = f.submit "Sign in", class: "button small"
+      %div.row
+        %div.large-4.large-centered.columns
+          = render "devise/shared/links"

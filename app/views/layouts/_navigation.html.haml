@@ -1,6 +1,6 @@
 %nav.top-bar
   %ul.title-area
-    %li.name= link_to "Javazone", root_path, :class => 'brand'
+    %li= link_to "Javazone", root_path, class: "name"
   %section.top-bar-section
     %ul.right
       - if user_signed_in?

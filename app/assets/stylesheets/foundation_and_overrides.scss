@@ -67,8 +67,8 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
+$primary-color: #C25A47;
+$secondary-color: #C25A47;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -305,14 +305,14 @@ $default-float: left;
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: #ddd;
-// $fieldset-padding: emCalc(20);
-// $fieldset-margin: emCalc(18, 0);
+$fieldset-padding: emCalc(60);
+$fieldset-margin: emCalc(50, 230);
 
 // We use these to style the legends when you use them
 
 // $legend-bg: #fff;
 // $legend-font-weight: bold;
-// $legend-padding: emCalc(0, 3);
+$legend-padding: emCalc(5, 20);
 
 // We use these to style the prefix and postfix input elements
 
@@ -1234,7 +1234,7 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: #543C38;
 
 // Height and margin
 
@@ -1249,6 +1249,7 @@ $default-float: left;
 
 // $topbar-title-weight: bold;
 // $topbar-title-font-size: emCalc(17);
+
 
 // Style the top bar dropdown elements
 
