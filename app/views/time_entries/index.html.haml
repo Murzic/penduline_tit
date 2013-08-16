@@ -1,27 +1,34 @@
-%h2= @project.name
-%table
-  %th Date
-  %th Hours
-  - if current_user.has_role? :admin
-    - @project.time_entries.each do |time_entry|
-      - if time_entry.user == @user
+%row 
+  %div.large-4.large-centered.columns
+    %h2= @project.name
+%row
+  %div.large-4.large-centered.columns
+    %table
+      %thead
         %tr
-          %td= time_entry.date
-          %td= time_entry.hours
-  - else
-    = form_for @time_entry, url: project_time_entries_path(@project)  do |f|
-      %tr
-        %td= f.date_field(:date)
-        %td= f.text_field(:hours)
-        %td= f.submit
+          %th Date
+          %th Hours
+      %tbody
+        - if current_user.has_role? :admin
+          - @project.time_entries.each do |time_entry|
+            - if time_entry.user == @user
+              %tr
+                %td= time_entry.date
+                %td= time_entry.hours
+        - else
+          = form_for @time_entry, url: project_time_entries_path(@project)  do |f|
+            %tr
+              %td= f.date_field(:date)
+              %td= f.text_field(:hours)
+              %td= f.submit class: "button small"
 
-    - current_user.time_entries.reverse_each do |time_entry|
-      - if time_entry.project == @project
-        %tr
-          %td= time_entry.date
-          %td= time_entry.hours
+          - current_user.time_entries.reverse_each do |time_entry|
+            - if time_entry.project == @project
+              %tr
+                %td= time_entry.date
+                %td= time_entry.hours
 
-- if current_user.has_role? :admin
-  = link_to "Back", project_path(@project)
-- else
-  = link_to "Back", root_path
+    - if current_user.has_role? :admin
+      = link_to "Back", project_path(@project), class: "button tiny radius"
+    - else
+      = link_to "Back", root_path, class: "button tiny radius"
