@@ -1,10 +1,17 @@
-%h2= @project.name
-%table
-  %th Developer name
-  %th Hours worked on the project
-  - @users.each do |user|
-    - if user.time_entries.where(project: @project).any?
-      %tr
-        %td= link_to user.name, project_time_entries_path(@project, user_id: user)
-        %td= user.time_entries.where(project: @project).sum(:hours)
-= link_to "Back", root_path
+%row
+  %div.large-4.large-centered.columns
+    %h2= @project.name
+%row
+  %div.large-4.large-centered.columns
+    %table
+      %thead
+        %tr
+          %th Developer name
+          %th Hours worked on the project
+        %tbody
+          - @users.each do |user|
+            - if user.time_entries.where(project: @project).any?
+              %tr
+                %td= link_to user.name, project_time_entries_path(@project, user_id: user)
+                %td= user.time_entries.where(project: @project).sum(:hours)
+    = link_to "Back", root_path, class: "button tiny radius"
