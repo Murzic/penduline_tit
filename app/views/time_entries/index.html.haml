@@ -1,6 +1,10 @@
 %row 
   %div.large-4.large-centered.columns
-    %h2= @project.name
+    .titl
+      - if current_user.has_role? :admin
+        %h2= @user.name 
+      - else
+        %h2= @project.name
 %row
   %div.large-4.large-centered.columns
     %table

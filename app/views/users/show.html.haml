@@ -1,6 +1,7 @@
 %row
   %div.large-4.large-centered.columns
-    %h3= @user.name
+    .titl
+      %h2= @user.name
 %row
   %div.large-4.large-centered.columns
     %table
@@ -14,3 +15,4 @@
         %tr
           %th Created at
           %th= @user.created_at.to_date
+    = link_to "Back", users_path, class: "button tiny radius"
