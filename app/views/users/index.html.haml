@@ -1,22 +1,25 @@
-%h3 Users
-.span8
-  %table.table.table-condensed
-    %thead
-      %tr
-        %th Username
-        %th Email
-        %th Registered
-        %th Role
-        %th
-        %th
-    %tbody
-      - @users.each do |user|
+%row
+  %div.large-5.large-centered.columns
+    %h3 All users
+%row
+  %div.large-6.large-centered.columns
+    %table
+      %thead
         %tr
-          %td= link_to user.name, user
-          %td= user.email
-          %td= user.created_at.to_date
-          %td= user.roles.first.name.titleize unless user.roles.first.nil?
-          %td.a.button.tiny{"data-reveal-id" => "modal-#{user.id}", href: "#"} Change role
-          = render user
-          %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete) unless user == current_user
+          %th Username
+          %th Email
+          %th Registered
+          %th Role
+          %th
+          %th
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= link_to user.name, user
+            %td= user.email
+            %td= user.created_at.to_date
+            %td= user.roles.first.name.titleize unless user.roles.first.nil?
+            %td= link_to "Change role", "#", "data-reveal-id" => "modal-#{user.id}"
+            = render user
+            %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete) unless user == current_user
         
