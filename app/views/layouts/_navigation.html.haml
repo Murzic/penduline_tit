@@ -1,7 +1,11 @@
 %nav.top-bar
   %ul.title-area
-    %li= link_to "", root_path, class: "title_name"
+    %li.name
+      %h1= link_to "Home", root_path
   %section.top-bar-section
+    %ul.left
+      - if user_signed_in?
+        %li= link_to current_user.name
     %ul.right
       - if user_signed_in?
         %li= link_to 'Logout', destroy_user_session_path, :method=>'delete'

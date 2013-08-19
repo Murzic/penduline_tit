@@ -1,18 +1,18 @@
 %row
-  %div.large-4.large-centered.columns
+  %div.large-3.large-centered.columns
     %h1 Projects
 
 %row
   %div.large-4.large-centered.columns
     %ol
       - @projects.each do |project|    
-        - if current_user.has_role? :admin
+        - if  current_user && current_user.has_role?(:admin)
           %li= link_to project.name, project
         - else
           %li= link_to project.name, project_time_entries_path(project) 
 %row
   %div.large-4.large-centered.columns
-    - if current_user.has_role? :admin
+    - if current_user && current_user.has_role?(:admin)
       = form_for @project, url: projects_path  do |f|
         = f.label(:name)
         = f.text_field(:name)
