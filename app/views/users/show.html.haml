@@ -1,5 +1,16 @@
-%h3 User
-%p
-  User: #{@user.name}
-%p
-  Email: #{@user.email if @user.email}
+%row
+  %div.large-4.large-centered.columns
+    %h3= @user.name
+%row
+  %div.large-4.large-centered.columns
+    %table
+      %thead
+        %tr
+          %th Role
+          %th= @user.roles.first.name.titleize if @user.roles.any?
+        %tr
+          %th Email
+          %th= @user.email
+        %tr
+          %th Created at
+          %th= @user.created_at.to_date
