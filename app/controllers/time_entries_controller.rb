@@ -3,10 +3,16 @@ class TimeEntriesController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     @time_entry = @project.time_entries.new
-    if current_user.has_role? :admin
+    if current_user && current_user.has_role?(:admin)
       @user = User.find(params[:user_id])
     end
+  end
 
+  def destroy
+    @time_entry = TimeEntry.find(params[:id])
+    @time_entry.destroy
+
+    redirect_to :back
   end
 
   def create

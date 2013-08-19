@@ -27,6 +27,7 @@
               %tr
                 %td= time_entry.date
                 %td= time_entry.hours
+                %td= link_to "Delete", project_time_entry_path(@project, time_entry), method: :delete, data: { confirm: 'Are you sure?' } 
 
     - if current_user.has_role? :admin
       = link_to "Back", project_path(@project), class: "button tiny radius"
