@@ -25,8 +25,8 @@
         / %i (we need your current password to confirm your changes)
         = f.password_field :current_password
         = f.submit "Update", class: "button small"
-%fieldset        
-  %legend Cancel my account
-  %div.row
-    %div.large-5.large-centered.columns
-      Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}.
+/ %fieldset        
+/   %legend Cancel my account
+/   %div.row
+/     %div.large-5.large-centered.columns
+/       Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}.

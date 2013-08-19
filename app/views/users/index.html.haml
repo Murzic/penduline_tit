@@ -19,7 +19,7 @@
             %td= user.email
             %td= user.created_at.to_date
             %td= user.roles.first.name.titleize unless user.roles.first.nil?
-            %td= link_to "Change role", "#", "data-reveal-id" => "modal-#{user.id}"
+            %td= link_to("Change role", "#", "data-reveal-id" => "modal-#{user.id}") unless user == current_user 
             = render user
             %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete) unless user == current_user
         
