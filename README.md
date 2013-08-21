@@ -1,7 +1,7 @@
 # Penduline tit
-Simple project time tracker.
+Simple project time tracker. Here are some tits for you:
 ![GitHub Logo](/files/penduline.jpg)
-Format: ![Alt Text](http://ibc.lynxeds.com/files/pictures/Remiz_pendulinus_pendulinus-2.jpg)
+![Alt Text](http://ibc.lynxeds.com/files/pictures/Remiz_pendulinus_pendulinus-2.jpg)
 
 ## Installation and launching
 You will need ruby 2.0.0 and rails 4.0.0.
