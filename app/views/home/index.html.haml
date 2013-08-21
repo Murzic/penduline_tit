@@ -13,7 +13,7 @@
             - if  current_user && current_user.has_role?(:admin)
               %th= link_to project.name, project
               / %th= link_to "Edit", edit_project_path(project), class: "button tiny radius"
-              %th= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "button tiny radius"
+              %th= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "button tiny radius", style: "margin-bottom: 0"
             - else
               %th= link_to project.name, project_time_entries_path(project) 
 

@@ -345,7 +345,7 @@ $legend-padding: emCalc(5, 20);
 // We use these to build padding for buttons.
 
 // $button-med: emCalc(12);
-// $button-tny: emCalc(7);
+// $button-tny: emCalc(0);
 // $button-sml: emCalc(9);
 // $button-lrg: emCalc(16);
 
@@ -1173,7 +1173,7 @@ $legend-padding: emCalc(5, 20);
 // $table-head-font-size: emCalc(14);
 // $table-head-font-color: #222;
 // $table-head-font-weight: bold;
-$table-head-padding: emCalc(10, 10, 0);
+// $table-head-padding: emCalc(8, 10, 10);
 
 // These control the row padding and font styles
 
