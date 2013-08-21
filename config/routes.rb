@@ -1,4 +1,4 @@
-Javazone::Application.routes.draw do
+Penduline_tit::Application.routes.draw do
   root :to => "home#index"
   devise_for :users, :controllers => {:registrations => "registrations"}
  

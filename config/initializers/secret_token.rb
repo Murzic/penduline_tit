@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Javazone::Application.config.secret_key_base = 'aa7a72f0132d33dd1b1c22b04fc35038571d413d21de156f1f1c25dd8b92ddb1213257ed1bccafc2cb24f14f389483d980cd9d9a1d94932aea4fe705bee617a5'
+Penduline_tit::Application.config.secret_key_base = 'aa7a72f0132d33dd1b1c22b04fc35038571d413d21de156f1f1c25dd8b92ddb1213257ed1bccafc2cb24f14f389483d980cd9d9a1d94932aea4fe705bee617a5'

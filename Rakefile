@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Javazone::Application.load_tasks
+Penduline_tit::Application.load_tasks
