@@ -5,6 +5,13 @@ class ProjectsController < ApplicationController
     @users = User.all
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+
+    redirect_to :back
+  end
+
   def create
     @project = Project.create(project_params)
     redirect_to :back
