@@ -9,10 +9,9 @@ Penduline_tit::Application.configure do
   :address => "smtp.gmail.com",
   :port => 587,
   :authentication => :plain,
-  # :domain => ENV['GMAIL_SMTP_USER'],
   enable_starttls_auto: true,
-  :user_name => "titpenduline@gmail.com",
-  :password => "titstitstits",
+  :user_name => ENV["MAILER_EMAIL"],
+  :password => ENV["MAILER_PASSWORD"],
   :openssl_verify_mode  => 'none'
   }
   # In the development environment your application's code is reloaded on
