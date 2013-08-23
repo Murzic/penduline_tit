@@ -19,7 +19,7 @@ When you sign in as an admin you have all the projects in a table, each of them 
 ![](/files/Selection_003.png)
 The next thing that the admin can do, is to click on the project's name and see all the users that have been working on it and the total amount of hours.
 ![](/files/Penduline tit - Chromium_005.png)
-Then if you click on a user's name you get to see all of the time entries that user created for that project.
+When you click on a user's name you get to see all of the time entries created by that user for that project.
 ![](/files/Penduline tit - Chromium_006.png)
 In the top right corner there is the Admin link that sends you to the list of all the registered users.
 ![](/files/Penduline tit - Chromium_007.png)
@@ -27,7 +27,7 @@ On this page you can change the roles of the users, view some info about them an
 ![](/files/Penduline tit - Chromium_010.png)
 ![](/files/Penduline tit - Chromium_011.png)
 ![](/files/Penduline tit - Chromium_009.png)
-As a simple user you get to see only the projects' names. When you click on one of them, you are redirected to the page where you can create your time entries.
+As a simple user you only get to see the projects' names. When you click on one of them, you are redirected to the page where you can create your time entries.
 ![](/files/Penduline tit - Chromium_013.png)
 All you have to do is to fill in both fields and click the "Create Time entry" button.
 ![](/files/Penduline tit - Chromium_014.png)
